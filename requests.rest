@@ -1,0 +1,22 @@
+###GET Home page
+
+GET https://server-deploy-ibm1.onrender.com/localhost:3001/api/lenses
+
+###post to signup
+POST https://lens-ease-server-production.up.railway.app/api/auth/signup
+Content-Type: application/json
+
+{
+    "username": "test",
+    "email": "test@gmail.com",
+    "password": "Test1234!@",
+    "isAdmin": false
+}
+###post to signin
+POST https://lens-ease-server-production.up.railway.app/api/auth/signin
+Content-Type: application/json
+
+{
+    "email": "test@gmail.com",
+    "password": "Test1234!@"
+}
