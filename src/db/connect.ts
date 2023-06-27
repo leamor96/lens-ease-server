@@ -9,7 +9,6 @@ const { DB, ROLES } = dbConfig;
 
 const connect = async () => {
   mongoose.set("strictQuery", false);
- /*  await mongoose.connect(`mongodb://${HOST}:${PORT}/${DB}`); */
  
   await mongoose.connect(
    process.env.MONGO_URI
