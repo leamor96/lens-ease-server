@@ -98,6 +98,7 @@ router.post("/signin", validateSignIn, function (req, res) { return __awaiter(vo
                         id: user.id,
                         favorite: user.favoritesLens,
                         favoritePro: user.favoritesProLens,
+                        isAdmin: user.isAdmin,
                     })];
             case 3:
                 e_2 = _a.sent();

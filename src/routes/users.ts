@@ -56,6 +56,7 @@ router.post("/signin", validateSignIn, async (req, res) => {
       id: user.id,
       favorite: user.favoritesLens,
       favoritePro: user.favoritesProLens,
+      isAdmin:user.isAdmin,
     });
   } catch (e) {
     return res.status(500).json({ message: "Server error", error: e });

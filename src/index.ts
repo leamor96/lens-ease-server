@@ -8,11 +8,6 @@ import cors from "cors";
 import { submitFormRouter } from "./routes/submitForm.js";
 import { proLensesRouter } from "./routes/proLenses.js";
 import { submitProFormRouter } from "./routes/submitProForm.js";
-import dotenv from "dotenv";
-
-dotenv.config();
-const port = process.env.PORT || 5000;
-const origin= process.env.ORIGIN
 
 const app = express();
 
@@ -22,7 +17,7 @@ connect().catch((e) => {
 
 app.use(
   cors({
-    origin,
+    origin:"https://lens-ease-client.web.app",
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
@@ -37,5 +32,5 @@ app.use("/api/submit-pro-form", submitProFormRouter);
 
 app.use(notFound);
 
-
+const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Server is running on ${port}`));
